@@ -86,6 +86,10 @@ This analysis supports product decisions by:
 
 UX / Product Analytics Case Study – Client Experiment
 
+
+PL
+
+
 🧪 Analiza eksperymentu A/B/C/D – Klient
 📌 Opis projektu
 
