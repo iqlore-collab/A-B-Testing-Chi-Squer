@@ -90,8 +90,8 @@ UX / Product Analytics Case Study – Client Experiment
 ###PL
 
 
-##🧪 Analiza eksperymentu A/B/C/D – Klient
-##📌 Opis projektu
+🧪 Analiza eksperymentu A/B/C/D – Klient
+📌 Opis projektu
 
 Projekt dotyczy analizy eksperymentu A/B/C/D przeprowadzonego na stronie głównej Klienta w celu oceny wpływu różnych wariantów przycisku CTA (Call-To-Action) na zaangażowanie użytkowników.
 
