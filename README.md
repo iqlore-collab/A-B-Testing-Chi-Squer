@@ -142,13 +142,11 @@ rozkładzie kliknięć
 🧪 Metodyka
 Główna metryka:
 Click-Through Rate (CTR)
-𝐶
-𝑇
-𝑅
+CRT
 =
 kliknięcia
 wizyty
-CTR=
+/
 wizyty
 kliknięcia
 	​
