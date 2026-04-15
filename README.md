@@ -1,198 +1,146 @@
-# 🧪 Clients A/B/C/D Experiment Analysis
+📊 A/B/n Testing: CTR & Statistical Decision Analysis
+🚀 Project Summary
 
-## 🎯 Project Objective
+This project demonstrates an end-to-end A/B/n testing framework used to evaluate and compare multiple website variants based on user click behavior. The analysis combines CTR metrics, Chi-Square statistical testing, and post-hoc comparisons to support data-driven product decisions.
 
-This project analyzes an A/B/C/D experiment conducted on the Eniac homepage to evaluate which button design performs best in terms of user engagement.
+The goal is not only to identify performance differences but also to determine whether those differences are statistically significant and business-relevant.
 
-The tested variants were:
-- White “SHOP NOW”
-- Red “SHOP NOW”
-- White “SEE DEALS”
-- Red “SEE DEALS”
+🎯 Key Objectives
+Measure and compare Click-Through Rate (CTR) across multiple web variants (A, B, C, D)
+Apply Chi-Square statistical testing to evaluate significance
+Perform pairwise comparisons with Bonferroni correction
+Identify whether a clear winning variant exists
+Support product decisions using both statistics and user behavior signals
+📊 Dataset
 
-The main goal is to determine whether design changes (color + copy) significantly affect user Click-Through Rate (CTR).
+Each variant contains:
 
----
+Clicks – number of CTA interactions (e.g. “SHOP NOW”, “SEE DEALS”)
+Visits – total page visits
+Derived metric:
+CTR = Clicks / Visits
+🧠 Methodology
+1. CTR Analysis
 
-## 📊 Dataset Description
+CTR is computed per variant to measure engagement performance.
 
-The dataset contains aggregated click interaction data from four homepage variants (A, B, C, D).
+2. Chi-Square Test
 
-Each CSV file includes:
+Used to test whether click distributions differ significantly across variants.
 
-- `Element ID` – unique identifier of UI elements  
-- `Tag name` – HTML tag type  
-- `Name` – element label (e.g. Mac, iPhone, Accessories)  
-- `No. clicks` – number of clicks per element  
-- `Visible?` – visibility status of the element  
-- `Snapshot information` – experiment metadata  
+H0 (null hypothesis): All variants perform equally
+H1 (alternative hypothesis): At least one variant differs
+3. Post-hoc Pairwise Testing
 
-### Data scope:
-- Total homepage visits: **50,061**
-- 4 experimental variants (A, B, C, D)
+All variant pairs are compared using Chi-Square tests with Bonferroni correction to control for multiple comparisons.
 
----
+📈 Key Insights
+CTR differences alone are not sufficient for decision-making
+Statistical significance determines whether observed differences are reliable
+Behavioral metrics (e.g. drop-off rate, return rate) provide additional context for UX quality
+🏁 Example Outcome
+Some variants may show higher CTR but also higher drop-off rates
+Other variants may show more stable engagement and better retention signals
 
-## ⚠️ Limitations
+👉 Final product decisions are based on a combination of:
 
-- No user-level or session-level tracking
-- No funnel or path analysis available
-- Missing metrics:
-  - Drop-off rate
-  - Homepage-return rate
+statistical significance
+performance ranking
+user behavior patterns
+💡 Business Impact
 
-As a result, the analysis focuses on CTR and click distribution only.
+This analysis enables:
 
----
+Data-driven A/B testing decisions
+Reduction of subjective product choices
+Identification of UX patterns affecting user retention and engagement
+Clear framework for selecting or rejecting UI variants
+🛠️ Tools & Technologies
+Python (Pandas, SciPy)
+Chi-Square statistical testing
+Bonferroni correction
+Jupyter Notebook
+📌 Key Skills Demonstrated
+A/B/n testing design and analysis
+Hypothesis testing (Chi-Square)
+Multiple comparison correction
+Product analytics thinking
+Data-driven decision-making
+📁 Repository File
+Statistical_Analysis_of_Web_Variants_(CTR_&_Chi_Square_Test).ipynb
+🧾 Conclusion
 
-## 🧪 Methodology
+This project shows how statistical testing and behavioral analytics can be combined to make reliable product decisions beyond simple CTR comparisons. It highlights the importance of balancing statistical significance with real user behavior metrics to choose the most effective product variant.
 
-- Primary metric: Click-Through Rate (CTR)
-- Statistical test: Chi-square test (χ²)
-- Significance level: α = 0.05
+POLISH
 
-CTR formula:
-CTR = clicks / visits
+📊 A/B/n Testing: Analiza CTR i testy statystyczne (Chi-Square)
+🚀 Podsumowanie projektu
 
----
+Projekt przedstawia kompletną analizę testu A/B/n, którego celem jest porównanie kilku wariantów strony internetowej pod kątem skuteczności generowania kliknięć (CTR).
 
-## 📈 Key Output
+Analiza łączy metryki biznesowe (CTR) z testami statystycznymi (Chi-Square) oraz korektą wielokrotnych porównań (Bonferroni), aby podejmować decyzje oparte na danych, a nie intuicji.
 
-- CTR comparison across all variants
-- Statistical significance testing (χ²)
-- Identification of best-performing variant
-
----
-
-## 🚀 Business Value
-
-This analysis supports product decisions by:
-- identifying the most effective UI design,
-- quantifying impact of design changes,
-- enabling data-driven A/B testing decisions for homepage optimization.
-
----
-
-## 🛠️ Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- SciPy
-
----
-
-## 📌 Author
-
-UX / Product Analytics Case Study – Client Experiment
-
-
-###PL
-
-
-🧪 Analiza eksperymentu A/B/C/D – Klient
-📌 Opis projektu
-
-Projekt dotyczy analizy eksperymentu A/B/C/D przeprowadzonego na stronie głównej Klienta w celu oceny wpływu różnych wariantów przycisku CTA (Call-To-Action) na zaangażowanie użytkowników.
-
-Testowane warianty:
-
-White “SHOP NOW”
-Red “SHOP NOW”
-White “SEE DEALS”
-Red “SEE DEALS”
-
-Celem było sprawdzenie, czy zmiany w kolorze i treści przycisku wpływają na zachowanie użytkowników.
-
-🎯 Cel analizy
-
-Główne cele analizy:
-
-porównanie Click-Through Rate (CTR) dla wszystkich wariantów
-sprawdzenie, czy różnice są istotne statystycznie
-identyfikacja najlepszej wersji
-wsparcie decyzji produktowych opartych na danych
+🎯 Cele projektu
+Porównanie CTR dla wariantów A, B, C, D
+Sprawdzenie istotności statystycznej różnic między wariantami
+Identyfikacja potencjalnego „zwycięzcy” testu A/B/n
+Wsparcie decyzji produktowych na podstawie danych
 📊 Dane
 
-Dane składają się z czterech plików CSV odpowiadających wariantom A, B, C i D.
+Każdy wariant zawiera:
 
-Każdy plik zawiera zagregowane dane o interakcjach użytkowników.
+Clicks – liczba kliknięć w elementy CTA (np. „SHOP NOW”, „SEE DEALS”)
+Visits – liczba wizyt na stronie
+Wyliczana metryka:
+CTR = Clicks / Visits
+🧠 Metodologia
+1. Analiza CTR
 
-Struktura danych:
-Element ID – identyfikator elementu interfejsu
-Tag name – typ elementu HTML
-Name – nazwa elementu (np. Mac, iPhone, Accessories)
-No. clicks – liczba kliknięć w element
-Visible? – czy element był widoczny
-Snapshot information – metadane eksperymentu
-Założenia:
-liczba wizyt na wariant: 50 061
-dane zagregowane (brak danych o użytkownikach)
-⚠️ Ograniczenia
-brak danych na poziomie użytkownika (user/session)
-brak ścieżek użytkownika (user journey)
-brak możliwości bezpośredniego obliczenia:
-drop-off rate
-homepage-return rate
+Obliczenie współczynnika CTR dla każdego wariantu w celu porównania ich skuteczności.
 
-Analiza skupia się więc głównie na:
+2. Test Chi-Square
 
-CTR
-rozkładzie kliknięć
-🧪 Metodyka
-Główna metryka:
-Click-Through Rate (CTR)
-CRT
-=
-kliknięcia
-wizyty
-/
-wizyty
-kliknięcia
-	​
+Test sprawdzający, czy różnice w liczbie kliknięć między wariantami są istotne statystycznie.
 
-Test statystyczny:
-test chi-kwadrat (χ²)
-Hipotezy:
-H₀: wszystkie warianty mają taki sam CTR
-H₁: istnieje różnica w CTR między wariantami
-Poziom istotności:
-α = 0.05 (95%)
-📈 Wyniki
+H0 (hipoteza zerowa): wszystkie warianty mają taki sam CTR
+H1 (hipoteza alternatywna): co najmniej jeden wariant różni się istotnie
+3. Porównania parami (post-hoc)
 
-Analiza obejmuje:
+Wykonano testy parowe między wszystkimi wariantami z zastosowaniem korekty Bonferroniego, aby ograniczyć ryzyko błędu wielokrotnych porównań.
 
-obliczenie CTR dla każdej wersji
-budowę tabeli kontyngencji (kliknięcia vs brak kliknięć)
-test chi-kwadrat
-ranking wariantów
-💡 Wnioski
-Design (kolor + tekst przycisku) może wpływać na zachowanie użytkowników
-CTR to tylko część obrazu — warto analizować także metryki dalszych etapów
-Wyniki należy interpretować w kontekście biznesowym
-🚀 Wartość biznesowa
+📈 Kluczowe wnioski
+Sama różnica CTR nie wystarcza do podjęcia decyzji
+Istotność statystyczna pokazuje, czy różnice są „realne”, czy przypadkowe
+Dodatkowe metryki (drop-off rate, return rate) pomagają ocenić jakość doświadczenia użytkownika
+🏁 Przykład interpretacji
+Niektóre warianty mogą mieć wyższy CTR, ale jednocześnie gorsze wskaźniki zaangażowania (np. większy drop-off)
+Inne warianty mogą oferować bardziej stabilne zachowanie użytkowników
 
-Analiza pozwala:
+👉 Ostateczna decyzja powinna uwzględniać:
 
-wybrać najlepszy wariant interfejsu
-mierzyć wpływ zmian UX
-podejmować decyzje oparte na danych
+istotność statystyczną
+ranking CTR
+zachowanie użytkowników
+💡 Wpływ biznesowy
+
+Projekt pozwala:
+
+podejmować decyzje produktowe oparte na danych
+unikać błędnych wniosków opartych wyłącznie na CTR
+lepiej rozumieć zachowanie użytkowników
+wybierać warianty o najlepszym realnym wpływie na UX i konwersję
 🛠️ Technologie
-Python
-Pandas
-NumPy
-SciPy
-Matplotlib
-📂 Struktura projektu
-├── data/
-│   ├── eniac_a.csv
-│   ├── eniac_b.csv
-│   ├── eniac_c.csv
-│   └── eniac_d.csv
-├── notebooks/
-│   └── analysis.ipynb
-├── README.md
-👤 Autor
+Python (Pandas, SciPy)
+Test Chi-Square
+Korekta Bonferroniego
+Jupyter Notebook
+📌 Umiejętności
+Analiza A/B/n testów
+Testowanie hipotez statystycznych
+Analiza CTR i metryk UX
+Myślenie produktowe (product analytics)
+Podejmowanie decyzji na podstawie danych
+🧾 Podsumowanie
 
-Case study z zakresu analityki produktu i testów A/B
-Analiza eksperymentu
+Projekt pokazuje, jak łączyć analizę statystyczną z metrykami biznesowymi, aby podejmować wiarygodne decyzje produktowe. Kluczowym elementem jest nie tylko CTR, ale także jego istotność statystyczna oraz wpływ na zachowanie użytkowników.
